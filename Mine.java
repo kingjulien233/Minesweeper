@@ -264,7 +264,7 @@ public class Mine {
                 buttons[i].setText("💣");
                 buttons[i].setBackground(Color.ORANGE);
             } else {
-                buttons[i].setText(minesAround(i) + "");
+                buttons[i].setText(minesAround(i) != 0 ? minesAround(i) + "" : "");
                 buttons[i].setBackground(Color.GRAY);
             }
         }
@@ -275,7 +275,7 @@ public class Mine {
     public static void display() {
         for (int i = 0; i < SIZE_OF_BLOCKS; i++) {
             if (displays[i] == IS_DISPLAY && mines[i] == NOT_MINE) {
-                buttons[i].setText(minesAround(i) + "");
+                buttons[i].setText(minesAround(i) != 0 ? minesAround(i) + "" : "");
             }
         }
     }
